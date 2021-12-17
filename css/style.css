@@ -1,0 +1,164 @@
+/*---------------General-------------------------*/
+
+*{
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    
+    background-color: grey;
+    margin: 0;
+    padding: 0;   
+}
+
+#container{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    gap: 40px;
+    position: relative;  
+}
+
+#container h1{
+    position: absolute;
+    color: white;
+    position: absolute;
+    top: 2%;     
+}
+
+p{
+    transition: 1.5s;
+    font-size: 0em;
+    opacity: 0;
+    margin: 0;
+}
+
+.carre{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    transition: 2s;
+}
+
+.bg1{
+    background-color: rgb(66, 103, 178);
+}
+
+.bg2{
+    background-color: rgb(29, 161, 242);
+}
+
+.bg3{
+    background-color: rgb(225, 48, 108);
+}
+
+ion-icon{
+    color: aliceblue;
+    font-size: 50px;
+}
+
+.rotate{
+    transition: 1s;
+}
+
+.active {
+    transform: 1;
+    border-radius: 5px; 
+    border: 1px solid white;
+}
+
+.active p{
+    opacity: 1;
+    font-size: 0.8em;
+    color: white;
+}
+
+.active .rotate{
+    transform: rotate(360deg);
+
+}
+
+
+/*--------------------media query----------------*/
+
+@media screen and (min-width: 430px) and (max-width: 767px){
+    #container{
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        gap: 60px;
+        position: relative;
+    }
+
+    .carre{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100px;
+        height: 100px;
+        transition: 2s;
+    }
+
+    #container h1{
+        position: absolute;
+        color: white;
+        position: absolute;
+        top: 50px;     
+    }
+}
+
+@media screen and (min-width: 768px){
+    #container{
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        gap: 60px;
+        position: relative;
+    }
+
+    .carre{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 150px;
+        height: 150px;
+        transition: 2s;
+    }
+
+    #container h1{
+        position: absolute;
+        color: white;
+        position: absolute;
+        font-size: 2em;
+        top: 30px;     
+    }
+
+    ion-icon{
+        color: aliceblue;
+        font-size: 80px;
+    }
+
+    .active p{
+        opacity: 1;
+        font-size: 1.2em;
+        color: white;
+    }
+}
